@@ -1,0 +1,160 @@
+\documentclass[10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[pdftex]{graphicx}
+\usepackage[spanish]{babel}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\author{Martin Felipe Espinal Cruces \footnote{cofy43@ciencias.unam.mx}	}
+\title{Tarea 1b.}
+\begin{document}
+
+\begin{titlepage}
+	
+	\maketitle
+	
+	\vspace{.5in}
+
+	\begin{flushleft}
+		\section{\texttt Objetivo}
+		\paragraph{''Identificar las ventajas y despentajas en la resolución de problemas en paradigmas distintos''}
+
+		\section{\texttt Planteamiento del problema}
+		\begin{itemize}
+			\item ¿Qué carácteristicas de las vistas en clase tienen los lenguajes (y el paradigma) 		  usados para resolver los ejercicios propuestos?
+			
+			\begin{itemize}
+				\item Respecto al lenguaje de paradigma funcional se encuentran:
+			
+				\begin{itemize}
+					\item Al utilizar un lenguaje como haskell es claro que es un lenguaje de alto nivel(más cercano a nuestro lenguaje).
+					\item Es un lenguaje interpretado.
+					\item Utiliza claramente la recursión para la resolucion de los problemas,
+					\item Su evaluzción es perzosa ya que evalua las funciones sólo cuando son llamadas.
+					\item La utilización de la recursión como herramienta fundamental para la realización de las distintas funciones.
+				\end{itemize}
+		
+				\item Respecto al lenguaje de paradigma iteratívo se encuentran;
+					\begin{itemize}
+						\item Al utilizar el leguaje c++ utilizo un lenguaje compilado, que verifica
+						los errores antes de ser ejecutado.
+						\item Se encuentra en la categoría de lenguajes iterativos.
+						\item Las estructuras de control en especial el ciclo while para realizar diversas acciones para cumplir con las especificaciones de los ejercicios.
+						\item Al ser un lenguaje de bajo nivel, debido a que las intrucciones que se encuentran en el código funete son claramente mas parecidas al lenguaje que maneja la máquina.
+					\end{itemize}
+			
+			\end{itemize}
+			
+			\item Justificación:
+			\begin{itemize}
+				\item La razón por la que elegí el lenguaje de c++ fue para poder intentar interactuar un poco con los apuntadores que es una caracterítica principal del lenguje. Se puede observar esta implementación en el método que realiza la descomposición en factores prinmos, dado que en el lenguaje no está permitido la devolución de un arreglo, utilizo un apuntador a un arreglo de tipo entero para poder devolverlo.
+			\end{itemize}
+
+			\item ¿Qué ventajas y desventajas tiene implementar los ejercicios anteriores con respecto al paradigma y al lenguaje de programación elegidos?
+
+			\begin{itemize}
+				\item ventajas
+					\begin{itemize}
+						
+						\item Paradigma funcional
+						\begin{itemize}
+							\item La sintaxis fue sumamente amigable. Fue en general para todas las funciones.
+							\item Pocas líneas de código. Fue en general para todas las funciones.
+							\item Recusión, muy útil para la realización del método que factorizaba un número debido a que bastaba con una lista por comprensión para poder realizarla.
+						\end{itemize}
+
+						\item Paradigma Iterativo
+						\begin{itemize}
+							\item Utilización razonable de memoria para cada método
+							\item Alta cohesion entre las funciones mcd y mcm.
+							\item El uso del estado para obtener el mínimo común múltiplo y el mínimo común divisor a traves de sólo una operación aritmética.
+						\end{itemize}
+
+					\end{itemize}
+
+				\item Desventajas
+					\begin{itemize}
+						
+						\item Paradigma funcional
+							\begin{itemize}
+								\item El uso exagerado en el stack para la llamada recuriva en las funciones de mínimo común multiplo y máximo común divisor.
+								\item El uso de método auxiliar en la sucesión de Collatz.
+							\end{itemize}
+
+						\item Paradigma iterativo
+						\begin{itemize}
+							\item Lamentable uso de memoria para almacenar un arreglo suficientemente grande para poder almacenar los factores primos de un número en un arreglo
+							\item Uso plentamente necesario del ciclo while para obener la sucesión de Collatz y la división en factores primos.
+						\end{itemize}
+					\end{itemize}
+
+				\item En que escenario conviene útilizar los paradigmas que elegiste para cada caso? Considera las ventajas y características que expusiste en las preguntas anteriores.
+				\begin{itemize}
+
+					\item Obtener el mínimo común múltiplo: iterativo.
+					\item Obtener el máximo común divisor: iterativo.
+					\item Dado un número natural N, devolver verdadero si la sucesión de Collatz de ese número termina en el dígito 1: Funcional.
+					\item Devolver una lista o arreglo con la descomposición de factores primos de un natural N: Funcional
+				\end{itemize}
+			\end{itemize}
+
+		\end{itemize}
+		
+		\section{\texttt Desarrollo}
+		\paragraph{''Todo comienza con la elección de los paradigmas de programción, los cuales fueron Funcional e iterativo. Posteriormente en la elección de los lenguajes, Haskell y c++. Finalmente La implementación de las funciones y métodos para cada lenguajes sobre cada ejercicio.''}
+
+		\section{\texttt Solución}
+		\begin{itemize}
+			\item Problema 1:
+			\begin{itemize}
+				\item Paradigma funcional
+				\begin{itemize}
+					\item Para resolver esta función necesite de 2 funciones auxiliares "minimoComun" que dadas dos listas de enteros devolvía el número menor que se encontraba en amabas listas; y "multilos" que dado un número, genera una lista con todos los números que lo dividen. Al utilizar estas funciones en la llamada recursiva, obtenía el mínimo común múltiplo.
+				\end{itemize}
+				\item Paradigma iterativo
+				\begin{itemize}
+					\item En este paradigma útilizo el método máximo común divisor, con una opreción aritmética que consideraba el número mayor y lo dividía entre el máximo común divisor de ambos números y el resultado lo múltiplicaba por el número menor.
+				\end{itemize}
+			\end{itemize}
+
+			\item Problema 2:
+			\begin{itemize}
+				\item Paradigma funcional
+				\begin{itemize}
+					\item Para realizar esta función necesite de dos funciones auxiliares y una lista pro comprensión, la primera era "divisoresPropios" el cual utilizaba la función "divisores" para regresar una lista de los divisores incluyendo el número con el que se invocaba. La primera función auxiliar es "comun" que dado un par de listas devuelve una lista de elementos en común de ambas listas, la segunda función es "maximun" nativa del lenguaje que devuelve el elemento mayor de una lista. Finalmente la concatenación de las funciones resultaba en el máximo común divisor.
+				\end{itemize}
+				\item Paradigma iterativo
+				\begin{itemize}
+					\item Similar que en el método para obtener el mínimo común múltiplo utilizo dos variables auxiliares para obtener el elemento mayor y menor del imput, teniendo esto creo una variable para almacenar el resultado, y el proceso lo realizo mediante un ciclo while donde la condición es que el elemento mínimo sea distinto a cero, cumpliendo esa condición actualizo el valor de la variable del resultado al valor mínimo, actualizo el valor del número menor en el residuo de la divición del número mayor sobre el número menor, teniendo eso actualizo el valor del número mayor al del resultado (el que en un principio fue el número mayor) cuando la condición deja de cumplirce regreso el mínimo común múltiplo.
+				\end{itemize}
+			\end{itemize}
+
+			\item Problema 3:
+			\begin{itemize}
+				\item Paradigma funcional
+				\begin{itemize}
+					\item Para esta función requiero de una función auxiliar llamada "sucesíon" que sirve para devolver una lista con las condiciones de la conjetura de Collatz. Finalmente en la función "Collatz" verifico si el último elemento de la lista generada es uno, en cuyo caso devuelvo el valor booleano verdadero, en caso contrario falso.
+				\end{itemize}
+				\item Paradigma iterativo
+				\begin{itemize}
+					\item En este caso utilizo un ciclo while para comenzar a reducir el número según las condiciones planteadas, y finalmente devuelvo el valor de la sentencia "Si el número resultante del ciclo es uno".
+				\end{itemize}
+			\end{itemize}
+
+			\item Problema 4:
+			\begin{itemize}
+				\item Paradigma funcional
+				\begin{itemize}
+					\item Para la esta función fue necesaría una función auxiliar llamada "primos" que devuelve un booleano, resultante de la verificación de saber si un número es primo. Finalmente realizo una lista por comprención que recibe una lista desde 2 hasta n (dado que el número 1 dívide a todos los número y no es primo) y la condicion resultante de la función "primos".
+				\end{itemize}
+				\item Paradigma iterativo
+				\begin{itemize}
+					\item Dado la escencia de l lenguaje son los iteradores, use esta característica para la realización de este punto, dado un arreglo de tamaño constante utiliza 2 variables principales, el primero "cantidad" que representa el tamaño real donde se encuentran alamcenados los factores primos, para evitar recorrer inceserariamente el resto del arreglo, y la segunda "i" que representará el número primo que factoriza el número del imput, finalmente dentro de un cliclo hago la verificación de si el número "i" divide al imput, en tal caso se alamcena en el arreglo, cuando la condición de que el imput se vuelva 1 devuelve el arreglo.
+				\end{itemize}
+			\end{itemize}
+		\end{itemize}
+	\end{flushleft}
+\end{titlepage}
+
+\end{document}
