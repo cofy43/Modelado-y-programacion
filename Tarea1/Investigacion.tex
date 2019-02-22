@@ -1,0 +1,162 @@
+\documentclass[10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+\author{Martin Felipe Espinal Cruces}
+\title{Tarea 1}
+
+\begin{document}
+\maketitle{}
+
+\paragraph{Lenguajes de programación}
+
+\section{\normalsize ¿Cuáles son las principales diferencias entre la programación imperativa y la declarativa?}
+\setlength{\parindent}{0pt}
+\paragraph{La programación imperativa está basado en la máquina de Turing mientras que la declarativa se basa en el cálculo lambda.
+La programación imperativa describe paso a paso como resolver un problema mientras que el declarativo solo se encarga de describir el problema.
+El paradigma imperativo se describe en términos de instrucciones, condiciones, y pasos todo esto mientras va modificando su estado. Mientras que el declarativo se describe en términos de proposiciones y afirmaciones sin modificar su estado. En la programación imperativa nos encontramos con estructuras de control como \textit{for, while, do while}, etc., en la programación declarativa el flujo del programa se da a través de la recursion o por medio de funciones de alto nivel como lo son \textit{map, filter}, entre otros. En la programación declarativo nos encontramos con algo llamado \textit{transparencia referencial}, esto quiere decir que al ejecutar una función determinada, esta no modificará ninguna fuera de ella, caso que no siempre ocurre en la programación imperativa, dado que si una variable se ve modificada por algún método, no tendremos la certeza de que algún otro método fuera de este se vea igualmente alterado. Finalmente en el paradigma declarativo no importa el orden de ejecución mientras que en el imperativo es fundamental el orden en el que se ejecuten las instrucciones.}
+
+\section{\normalsize Para los siguientes paradigmas de programación: POO, funcional, lógico y estructurado, investigue los siguiente:}
+
+\begin{itemize}
+  \item Características
+  \item Diferencias
+  \item Manejo de pila de ejecución
+  \item Ejemplos de lenguajes
+\end{itemize}
+
+\paragraph{\normalsize Programación orientada a objetos (POO)}
+\begin{itemize}
+  \item Características
+  	\begin{itemize}
+  		\item Abstracción: Características y comportamientos esenciales de un objeto.
+  		\item Encapsulamiento: Manera de contener los elementos de un objeto, que permite una alta cohesión.
+  		\item Modularidad: Dividir el programa en pequeñas partes que se encargaran de dividir el problema.
+  		\item Polimorfismo: Manera en que una clase hijo realiza de manera diferente comportamientos que hereda de una súper clase.
+  		\item Herencia: Relación entre clases, con una jerarquía en la cual se transfieren características y comportamientos.
+  		\item Recolección de basura: Por su traducción Garbage Collector es el encargado de designar memoria respecto a los objetos y las referencias a los mismos.
+  	\end{itemize}
+  \item Diferencias
+  	\begin{itemize}
+  		\item POO vs funcional: La solución de la programación funcional se modela a través de describir el problema, sin indicar como lo hará, a diferencia de POO ya que en ella se debe indicar paso a paso la solución.
+      \item POO vs lógica: Mientras que POO se dedica a resolver un problema paso a paso, en la programación lógica se encarga los resuelve mediante sentencias.
+      \item POO vs estructurada: La gran diferencia que se observa entre estos paradigmas es la legibilidad del código, haciendo más fácil encontrar errores en el código, a diferencia de POO.
+  	\end{itemize}
+  \item Manejo de pila de ejecución
+    \begin{itemize}
+      \item El manejo de la pila de ejecución es Last In First Out, esto quiere decir que la última llamada almacenada es la primera en salir.
+    \end{itemize}
+  \item Ejemplos de lenguajes
+    \begin{itemize}
+      \item Java
+      \item PHP
+      \item Phyton
+      \item Ruby
+      \item JavaScript
+    \end{itemize}
+\end{itemize}
+
+\paragraph{\normalsize Programación funcional}
+\begin{itemize}
+  \item Características
+    \begin{itemize}
+      \item Basado en el cálculo lambda.
+      \item Construido únicamente por funciones.
+      \item Capas de recibir como parámetro como argumentos funciones en funciones y devolver funciones como resultado (Funciones de orden superior).
+      \item Contienen funciones que no causan efectos secundarios (Funciones puras).
+      \item Funciones definidas en términos de si mismas (recursividad).
+    \end{itemize}
+  \item Diferencias
+    \begin{itemize}
+      \item Funcional vs POO: En algunos lenguajes de paradigma funcional como haskell existe el tipado estático fuerte, esto quiere decir que requiere que las variables sean declaradas con un tipo, mientras que en POO este tipado son expresados en tiempo de compilación.
+      \item Funcional vs Lógico: EL planteamiento del problema en la programación funcional es a través de la descripción del problema, mientras que en la lógica es a través de sentencias.
+      \item Funcional vs estructurado: Mientras que en  ambos el código es legible (claro que esto depende del programador) en la programación estructurada nos encontramos con los famosos bucles como son while, for, y por el otro lado en la programación funcional estos son substituidos por la recursión.
+    \end{itemize}
+  \item Manejo de pila de ejecución
+    \begin{itemize}
+      \item En este paradigma podemos ver que como en muchos otros tenemos ventajas y desventajas, en este caso ganamos almacenamiento, puesto que no guardamos estado, pero perdemos en ocasiones rendimiento, puesto que los cálculos que se realizan son a través de lazy evaluation, que esto quiere decir que no se ejecutará una instrucción hasta que sea necesario.
+    \end{itemize}
+  \item Ejemplos de lenguajes
+    \begin{itemize}
+      \item Haskell
+      \item Racket
+      \item Elm
+      \item Erlang
+      \item Ocami
+    \end{itemize}
+\end{itemize}
+
+\paragraph{\normalsize Programación Lógica}
+\begin{itemize}
+  \item Características
+    \begin{itemize}
+      \item La mayoría de los lenguajes de programación se basan se basan en la teoría lógica del primer orden.
+      \item La manera de resolver los problemas es a través de sentencias.
+      \item construye base de conocimientos mediante reglas y hechos.
+      \item Reglas: Permite definir nuevas relaciones a partir de otras ya existentes.
+      \item Hecho:Es la forma más sencilla de sentencia.
+      \item Unificación de términos.
+      \item Mecanismos de inferencia automática.
+      \item Recursión como estructura de control básica. 
+    \end{itemize}
+  \item Diferencias
+  \begin{itemize}
+    \item Lógica vs POO: Mientras que POO se dedica a resolver un problema paso a paso, en la programación lógica se encarga los resuelve mediante sentencias.
+    \item Lógica vs Funcional: EL planteamiento del problema en la programación funcional es a través de la descripción del problema, mientras que en la lógica es a través de sentencias.
+    \item Lógica vs estructurada: En la programación estructurada es muy importante la secuencia de instrucciones, mientras que en la programación lógica esto no tiene que ser precisamente así, ya que depende de la ejecución de las sentencias indicadas.
+  \end{itemize}
+  \item Manejo de pila de ejecución
+    \begin{itemize}
+      \item Puesto que este paradigma entra en el declarativo la evaluación y por ende la ejecución del código dependerá de las reglas de procedencia, las reglas de asociatividad y el uso de operadores, por consecuente la ejecución de una o más líneas de código se dará hasta que se cumplan las condiciones necesarias.
+    \end{itemize}
+  \item Ejemplos de lenguajes
+    \begin{itemize}
+      \item Prolog
+      \item Mercury
+      \item Logtalk
+      \item Curry
+      \item SequencelL
+    \end{itemize}
+\end{itemize}
+
+\paragraph{\normalsize Programación estructurada}
+\begin{itemize}
+  \item Características
+    \begin{itemize}
+      \item Estructura de control: Son aquellas partes de código que permite controlar el orden de ejecución de instrucciones establecidas.
+      \item Secuencia: Es el orden de ejecución de instrucciones del código, tal como están escritas.
+      \item Selección: Posibilidad de elegir entre la ejecución de dos instrucciones en base a la evaluación de una sentencia.
+      \item Iteración: Manera de repetir una instrucción, o un conjunto de ellas mientras se cumpla una condición.
+      \item Segmentación: Es modular el código de manera que guarden relación de forma jerárquica comunicándose a través de una lista de parámetros.
+      \item Identación: Permite la identificación de un bloque de código para ser ejecutado.
+    \end{itemize}
+  \item Diferencias
+    \begin{itemize}
+      \item Estructural vs POO: La gran diferencia que se observa entre estos paradigmas es la legibilidad del código, haciendo más fácil encontrar errores en el código, a diferencia de POO.
+      \item Estructural vs Funcional: Mientras que en  ambos el código es legible (claro que esto depende del programador) en la programación estructurada nos encontramos con los famosos bucles como son while, for, y por el otro lado en la programación funcional estos son substituidos por la recuirción.
+      \item Estructural vs Lógica: En la programación estructurada es muy importante la secuencia de instrucciones, mientras que en la programación lógica esto no tiene que ser precisamente así, ya que depende de la ejecución de las sentencias indicadas.
+    \end{itemize}
+  \item Manejo de pila de ejecución
+    \begin{itemize}
+      \item Debido a que la ejecución del programa es en el orden en que fue escrito (a excepción de instrucciones como Go to, o las estructuras de control como los ciclos), será muy similar a como se muestre en el código.
+    \end{itemize}
+  \item Ejemplos de lenguajes
+    \begin{itemize}
+      \item Algol
+      \item Ada
+      \item Pascal
+      \item PL/I
+    \end{itemize}
+\end{itemize}
+
+\paragraph{\normalsize Bibliografía}
+  \begin{itemize}
+    \item Oscar Campos. (2011). Diferencias entre paradigmas de programación. 02/02/2019, de genbeta.com Sitio web: https://www.genbeta.com/desarrollo/diferencias-entre-paradigmas-de-programacion
+    \item Alexander Rosales. (2012). Programacion Orientada a Objeto (POO) vs Programacion estructurada . 02/02/2019, de blogspot.com Sitio web: http://ingieneriadelsoftware2.blogspot.com/2012/11/programacion-orientada-objeto-y.html
+    \item Sonia Joaquín Trejo Paola Marquez Alfredo. (2016). PROGRAMACIÓN LÓGICA Y FUNCIONAL . 02/02/2019, de blogspot.com Sitio web: https://programacionlogyfun.blogspot.com/2016/03/programacion-logica-y-funcional-la.html
+    \item taniamcl. (2014). EVALUACIÓN DE EXPRESIONES.. 02/02/2019, de wordpress.com Sitio web: https://programacionlogicayfuncional.wordpress.com/2014/02/12/evaluacion-de-expresiones/
+    \item S/A. (2018). Programación estructurada. 02/02/2019, de wikipedia Sitio web: https://es.wikipedia.org/wiki/Programaci\%C3\%B3n\_estructurada
+  \end{itemize}
+	
+\end{document}
