@@ -1,0 +1,54 @@
+\documentclass[10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[pdftex]{graphicx}
+\usepackage[spanish]{babel}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\begin{document}
+
+\title{Tarea 4 Estacionamiento\\
+Modelado y Programación}
+
+\author{Martin Felipe Espinal Cruces\thanks{cofy43@ciencias.unam.mx}}
+
+\date{02 Abril 2019}
+\maketitle
+
+\section{Planteamiento del Problema}
+
+El dueño de un estacionamineto nos contrata para la realización de
+un programa que le facilite el manejo de su negocio.
+
+\section{Objetivo}
+
+Se busca la realización del sistema a traves de una simulacion dada
+por un tiempo, utilizando los fundamentos de la programación orientado
+a objetos
+
+\section{Desarrollo }
+
+Para la realización de esta tarea se crearon las clases Auto y Moto que 
+son los tipos de vehículos que se almacenaran en el estacionamiento y que 
+contendran como atributos la maraca, el modelo junto con el año, respectivamente
+
+Posteriormente se creó una clase llamada Cajon la cual alamacena información como
+el modelo, la marca, entre otros. 
+Dentro de esta misma clase se encuentran 3 métodos muy importantes para la realización
+de la tarea, uno es cobroAlSalir, el cual como su nombre lo indica realiza las cuentas
+necesarias para saber la cantidad al cobrar cuando un auto sale del estacionamiento 
+tomando en consideranción cuestiones como, si es pensionado, en cuyo caso se verifica
+si tiene la tarjeta vigente, si no lo es entonces se realiza los cobro necesarios 
+a corde del tiempo de estancia y en cuyo caso se verifica si se ha extraviado el boleto.
+Para la realización de la simulación se generan números aleatorios correspondientes al
+número de automoviles, motocicletas y la hora del día en que se realizara la simulación.
+Todas estas variables estan relacionadas al tiempo introducido, dado que cálculo el número de automoviles y motocicletas tomando en cosideración arbitraria de un total de ocho movimientos de autos por hora, de aquí tomo un promedio en base al tiempo multiplicada por la constante arbitraria, dividiendola en dos y generando un número aleatorio entre ese promedio para el número de automoviles y motos.
+Con base a este número genero números aleatorios para obtener las marcas y modelos de cada vehículo ingresado, y asignandole un espacio en el estacionamiento representado por un arreglo de booleanos de 12 x 12, en el cual se realiza una representación en asccii para identificar los espacios vacíos y los ocupados.
+Finalmente se muestra la representación del arreglo cuando se agrega un automovil y en caso de que el automovil salga se muestra el espacio al que correspondía en el estacionamiento.
+
+\section{Solución }
+
+La manera en la que intente cumplir con los lineamientos de la tarea fue con variables locales que se actualizaban en cada iteración, dentro de un ciclo for que tiene una duración igual al tiempo que indicado, pero sin afectar directamente al número de vehículos.
+
+\end{document}
